@@ -6,7 +6,7 @@
 #    By: ddordain <ddordain@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/29 17:31:17 by ddordain          #+#    #+#              #
-#    Updated: 2022/02/14 13:51:46 by ddordain         ###   ########.fr        #
+#    Updated: 2022/02/22 14:56:55 by ddordain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRCS			=	main.c \
 					draw.c \
 					init.c \
 					hook.c \
+					utils.c
 					
 
 OBJ				=	./objects

@@ -6,7 +6,7 @@
 /*   By: ddordain <ddordain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 15:21:53 by ddordain          #+#    #+#             */
-/*   Updated: 2022/02/22 10:17:09 by ddordain         ###   ########.fr       */
+/*   Updated: 2022/02/22 14:57:02 by ddordain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@
 # define J "julia"
 
 # define MSG_ERR_0 "error, please use ./fractol mandelbrot \
-or ./fractol julia\n"
+or ./fractol julia <(float)real> <(float)imaginary>\n"
 
 # define WIDTH 800
 # define HEIGHT 800
@@ -46,8 +46,8 @@ or ./fractol julia\n"
 typedef struct s_data
 {
 	char	*name;
-	int		j_r;
-	int		j_i;
+	float	j_r;
+	float	j_i;
 	void	*img;
 	char	*addr;
 	int		bpp;

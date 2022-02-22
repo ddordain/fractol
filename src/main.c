@@ -6,13 +6,12 @@
 /*   By: ddordain <ddordain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 15:25:02 by ddordain          #+#    #+#             */
-/*   Updated: 2022/02/22 10:15:29 by ddordain         ###   ########.fr       */
+/*   Updated: 2022/02/22 14:56:33 by ddordain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-/*
 static int	check_number(char *av)
 {
 	char	sign;
@@ -40,7 +39,6 @@ static int	check_number(char *av)
 	}
 	return (EXIT_SUCCESS);
 }
-*/
 
 static int	security_check(int ac, char **av)
 {
@@ -52,8 +50,9 @@ static int	security_check(int ac, char **av)
 	else if (ft_strncmp(av[1], M, ft_strlen(M)) == 0 && ac == 2
 		&& ft_strlen(av[1]) == ft_strlen(M))
 		return (EXIT_SUCCESS);
-	else if (ft_strncmp(av[1], J, ft_strlen(J)) == 0 && ac == 2
-		&& ft_strlen(av[1]) == ft_strlen(J))
+	else if (ft_strncmp(av[1], J, ft_strlen(J)) == 0 && ac == 4
+		&& ft_strlen(av[1]) == ft_strlen(J)
+		&& check_number(av[2]) == 0 && check_number(av[3]) == 0)
 		return (EXIT_SUCCESS);
 	else
 	{
@@ -71,6 +70,11 @@ int	main(int ac, char **av)
 	else
 	{
 		data.name = av[1];
+		if (ac == 4)
+		{
+			data.j_r = ft_atof(av[2]);
+			data.j_i = ft_atof(av[3]);
+		}
 		init(&data);
 		mlx_hook(data.mlx_win, 4, 1L << 2, zoom, &data);
 		mlx_hook(data.mlx_win, 2, 1L << 0, arrow, &data);
