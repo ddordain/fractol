@@ -6,7 +6,7 @@
 /*   By: ddordain <ddordain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 15:25:02 by ddordain          #+#    #+#             */
-/*   Updated: 2022/02/14 12:53:24 by ddordain         ###   ########.fr       */
+/*   Updated: 2022/02/22 10:15:29 by ddordain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,11 @@ static int	security_check(int ac, char **av)
 		ft_putstr_fd(MSG_ERR_0, 2);
 		return (EXIT_FAILURE);
 	}
-	else if (ft_strncmp(av[1], M, ft_strlen(M)) == 0 && ac == 2)
+	else if (ft_strncmp(av[1], M, ft_strlen(M)) == 0 && ac == 2
+		&& ft_strlen(av[1]) == ft_strlen(M))
 		return (EXIT_SUCCESS);
-	else if (ft_strncmp(av[1], J, ft_strlen(J)) == 0 && ac == 2)
+	else if (ft_strncmp(av[1], J, ft_strlen(J)) == 0 && ac == 2
+		&& ft_strlen(av[1]) == ft_strlen(J))
 		return (EXIT_SUCCESS);
 	else
 	{

@@ -6,7 +6,7 @@
 /*   By: ddordain <ddordain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 15:21:53 by ddordain          #+#    #+#             */
-/*   Updated: 2022/02/14 12:54:38 by ddordain         ###   ########.fr       */
+/*   Updated: 2022/02/22 10:17:09 by ddordain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ or ./fractol julia\n"
 # define UP 65362
 # define DOWN 65364
 
-
 typedef struct s_data
 {
 	char	*name;
@@ -65,8 +64,8 @@ typedef struct s_data
 
 typedef struct s_complex
 {
-	double x;
-	double y;
+	double	x;
+	double	y;
 }				t_complex;
 
 void	init(t_data *data);
