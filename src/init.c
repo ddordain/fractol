@@ -6,7 +6,7 @@
 /*   By: ddordain <ddordain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 15:30:45 by ddordain          #+#    #+#             */
-/*   Updated: 2022/02/14 12:53:14 by ddordain         ###   ########.fr       */
+/*   Updated: 2022/02/23 12:40:21 by ddordain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	init(t_data *data)
 	data->img = mlx_new_image(data->mlx, WIDTH, HEIGHT);
 	data->addr = mlx_get_data_addr(data->img, &data->bpp, &data->size_l, \
 				&data->endian);
-	data->zoom = 1;
+	data->zoom = 1.5;
 	data->xpos = 0;
 	data->ypos = 0;
 }

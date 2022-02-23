@@ -6,7 +6,7 @@
 /*   By: ddordain <ddordain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 15:34:57 by ddordain          #+#    #+#             */
-/*   Updated: 2022/02/22 15:31:56 by ddordain         ###   ########.fr       */
+/*   Updated: 2022/02/23 12:35:21 by ddordain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ static void	print_pixel_j(t_data *data, int (*f)(t_complex, t_complex))
 		{
 			c.x = data->j_r;
 			c.y = data->j_i;
-			z.x = data->xpos + (x * data->zoom);
+			z.x = -(data->xpos + (x * data->zoom));
 			z.y = data->ypos + (y * data->zoom);
 			img_pxl_put(data, x, y, f(z, c));
 			y++;

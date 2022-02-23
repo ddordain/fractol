@@ -6,7 +6,7 @@
 /*   By: ddordain <ddordain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 16:07:40 by ddordain          #+#    #+#             */
-/*   Updated: 2022/02/22 15:10:50 by ddordain         ###   ########.fr       */
+/*   Updated: 2022/02/23 12:41:50 by ddordain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ int	mandelbrot(t_complex z, t_complex c)
 	iter = 0;
 	if (iter == 0)
 	{
-		c.x = (2 * c.x) / WIDTH - 1.5;
-		c.y = (2 * c.y) / HEIGHT - 1;
+		c.x = (2 * c.x) / WIDTH - 2.1;
+		c.y = (2 * c.y) / HEIGHT - 1.5;
 	}
 	while ((pow(z.x, 2.0) + pow(z.y, 2.0) < 4) && (iter < ITER_MAX))
 	{
@@ -56,8 +56,8 @@ int	julia(t_complex z, t_complex c)
 	iter = 0;
 	if (iter == 0)
 	{
-		z.x = (2 * z.x) / WIDTH - 1;
-		z.y = (2 * z.y) / HEIGHT - 1;
+		z.x = (2 * z.x) / WIDTH + 1.5;
+		z.y = (2 * z.y) / HEIGHT - 1.5;
 	}
 	while ((pow(z.x, 2.0) + pow(z.y, 2.0) < 4) && (iter < ITER_MAX))
 	{

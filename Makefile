@@ -6,7 +6,7 @@
 #    By: ddordain <ddordain@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/29 17:31:17 by ddordain          #+#    #+#              #
-#    Updated: 2022/02/22 14:56:55 by ddordain         ###   ########.fr        #
+#    Updated: 2022/02/23 12:46:48 by ddordain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,11 +56,11 @@ RM				=	rm -rf
 
 DIR_GUARD		=	mkdir -p $(@D)
 
-$(OBJ)/%.o:	$(SRC)/%.c
+$(OBJ)/%.o:	$(SRC)/%.c ./include/fractol.h
 				$(DIR_GUARD)
 				$(CC) $(CFLAGS) $(INCS) -c $< -o $@
 
-$(NAME):		$(OBJS)
+$(NAME):		$(OBJS) 
 				make all -C $(FT_DIR)
 				make all -C $(MLX_DIR)
 				$(CC) $(CFLAGS) $(OBJS) $(LIBS) $(INCS) -o $(NAME)
