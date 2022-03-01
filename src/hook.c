@@ -6,7 +6,7 @@
 /*   By: ddordain <ddordain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 15:58:50 by ddordain          #+#    #+#             */
-/*   Updated: 2022/02/14 12:54:31 by ddordain         ###   ########.fr       */
+/*   Updated: 2022/03/01 13:57:48 by ddordain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,15 @@ int	zoom(int key, int x, int y, t_data *data)
 	}
 	draw(data);
 	mlx_put_image_to_window(data->mlx, data->mlx_win, data->img, 0, 0);
+	return (EXIT_SUCCESS);
+}
+
+int	close_win(t_data *data)
+{
+	mlx_destroy_image(data->mlx, data->img);
+	mlx_destroy_window(data->mlx, data->mlx_win);
+	mlx_destroy_display(data->mlx);
+	free(data->mlx);
+	exit(0);
 	return (EXIT_SUCCESS);
 }

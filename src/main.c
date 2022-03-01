@@ -6,7 +6,7 @@
 /*   By: ddordain <ddordain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 15:25:02 by ddordain          #+#    #+#             */
-/*   Updated: 2022/02/22 14:56:33 by ddordain         ###   ########.fr       */
+/*   Updated: 2022/03/01 13:58:11 by ddordain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ int	main(int ac, char **av)
 		init(&data);
 		mlx_hook(data.mlx_win, 4, 1L << 2, zoom, &data);
 		mlx_hook(data.mlx_win, 2, 1L << 0, arrow, &data);
+		mlx_hook(data.mlx_win, 17, 0, close_win, &data);
 		draw(&data);
 		mlx_put_image_to_window(data.mlx, data.mlx_win, data.img, 0, 0);
 		mlx_loop(data.mlx);

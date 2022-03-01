@@ -6,7 +6,7 @@
 /*   By: ddordain <ddordain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 16:07:40 by ddordain          #+#    #+#             */
-/*   Updated: 2022/02/23 12:41:50 by ddordain         ###   ########.fr       */
+/*   Updated: 2022/03/01 14:01:49 by ddordain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int	rgb(int iter)
 	double	b;
 	int		color;
 
-	r = sin(0.3 * (double)iter + rand());
-	g = sin(0.3 * (double)iter + 2) * 127 + 128;
+	r = sin(0.3 * (double)iter);
+	g = sin(0.3 * (double)iter);
 	b = sin(0.3 * (double)iter) * 127 + 128;
 	color = ((int)(255.999 * r) << 16) + ((int)(255.999 * g) << 8) \
 			+ ((int)(255.999 * b));

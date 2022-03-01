@@ -6,7 +6,7 @@
 /*   By: ddordain <ddordain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 15:21:53 by ddordain          #+#    #+#             */
-/*   Updated: 2022/02/23 12:49:32 by ddordain         ###   ########.fr       */
+/*   Updated: 2022/03/01 13:57:55 by ddordain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ int		julia(t_complex z, t_complex c);
 void	draw(t_data *data);
 int		zoom(int key, int x, int y, t_data *data);
 int		arrow(int key, t_data *data);
+int		close_win(t_data *data);
 double	ft_atof(const char *str);
 
 #endif
